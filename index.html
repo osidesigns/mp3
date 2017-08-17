@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styles.css" />
+	<title>My MP3 | Audio Player</title>
+</head>
+<body>
+	<div id="container">
+		<div id="player">
+			<div class="album-display">
+				<img src="imgs/nickelback.jpg" />
+			</div>
+			<div class="current-song-info-wrapper">
+			<div class="current-song-info">
+				<div id="timeline">
+					<p id="currentTime">0:00</p>
+					<div class="progress-bar">
+						<div class="progress">
+							<div class="playhead"></div>
+						</div>
+					</div>
+					<p id="duration">0:00</p>
+					</div>
+					<p id="songTitle">Loading Song...</p>
+					<p id="artistName">Loading Artist...</p>
+				</div>
+			</div>
+			<div id="audio-controls-wrapper">
+				<div id="audio-controls">
+					<div id="prev-btn" class="fn-buttons">
+						<img src="imgs/orange-prev.png" />
+					</div>
+					<div id="play-btn" class="fn-buttons">
+						<img src="imgs/orange-play.png" />
+					</div>
+					<div id="pause-btn" class="fn-buttons">
+						<img src="imgs/orange-pause.png" />
+					</div>
+					<div id="next-btn" class="fn-buttons">
+						<img src="imgs/orange-next.png" />
+					</div>
+				</div>
+				<div id="volume-controls">
+					<div class="volume">
+						<button type="button" id="volumeDecrease">-</button>
+						<span>volume</span>
+						<button type="button" id="volumeIncrease">+</button>
+						<p id="volume-level"></p>
+					</div>
+				</div>
+			</div>
+			<div id="branding">
+				<p id="owner"></p>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/myPlayer.js"></script>
+</body>
+</html>

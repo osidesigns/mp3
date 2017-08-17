@@ -1,0 +1,294 @@
+/*Page Styles */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/************* Custom Styles ************/
+
+@font-face {
+  font-family: DigitalFont;
+  src: url(../fonts/SFDigitalReadout.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: CursiveFont;
+  src: url(../fonts/Miama.ttf) format("truetype");
+}
+
+#container{
+	background: linear-gradient(#2d2d2d, #000000);
+	height: 1080px;
+	padding-top: 150px;
+}
+
+
+/* Audio Player CSS Styles */
+
+/* The Device */
+#player{
+	background: #000;
+	width: 360px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	color: #efefef;
+	
+}
+
+
+/* The Screen Display Area */
+.album-display{
+	margin: 0 auto;
+
+}
+
+.album-display img{
+	width: 100%;
+}
+
+.current-song-info-wrapper{
+	position: relative;
+	z-index:  1;
+	background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    margin-top: -90px;
+    padding: 5px 0 8px 0;
+}
+
+.current-song-info{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#timeline{
+	width: 280px;
+	display: block;
+	overflow: hidden;
+	margin: 10px auto 5px;
+}
+
+#currentTime{
+	float: left;
+}
+
+#timeline div.progress-bar{
+	height: 1px;
+	float: left;
+	margin: 5px;
+	width: 75%;
+	background: #999;
+	position: relative;
+}
+
+#timeline div.progress-bar .progress{
+	position: relative;
+	z-index: 1;
+	height: 1px;
+	width: 0%;
+}
+
+
+#timeline div.progress-bar .progress.orange{
+	background-color: #f48f19;
+}
+
+
+#timeline div.progress-bar .progress.blue{
+	background: #29c8de;
+}
+
+#timeline div.progress-bar .progress.pink{
+	background: #ff9fd9;
+}
+
+#timeline div.progress-bar .progress.purple{
+	background: #c229ff;
+}
+
+#timeline div.progress-bar .progress.red{
+	background: #e55656;
+}
+
+#timeline div.progress-bar .progress .playhead{
+	position: absolute;
+	z-index: 2;
+	width: 10px;
+	height: 10px;
+	margin: -4px 0 0 96%;
+	background: #ccc;
+	border-radius: 50%;
+}
+
+
+#duration{
+	float: left;
+}
+
+#songTitle{
+	margin-bottom: 5px;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#songTitle.orange{
+	color: #f48f19;
+}
+
+
+#songTitle.blue{
+	color: #29c8de;
+}
+
+#songTitle.pink{
+	color: #ff9fd9;
+}
+
+#songTitle.purple{
+	color: #c229ff;
+}
+
+#songTitle.red{
+	color: #e55656;
+}
+
+#artistName{
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+
+/* Audio Controls */
+#audio-controls{
+	overflow: hidden;
+	margin: 10px auto;
+	width: 220px;
+}
+
+.fn-buttons{
+	float: left;
+}
+
+/* #prev-btn,
+#next-btn{
+	width: 65px;
+	height: 65px;
+} */
+
+/* #play-btn,
+#pause-btn{
+	width: 88px;
+	height: 88px;
+} */
+
+/* Volume Controls */
+
+#volume-controls{
+	margin-top: 15px;
+	overflow: hidden;
+	color: #999;
+	
+}
+
+#volume-controls button{
+	background-color: #000;
+	border: 0;
+	outline: none;
+	color: #999;
+	font-size: 1.3em;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+}
+
+.volume{
+	margin: 0 auto;
+	width: 200px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+p#volume-level{
+	margin: 15px;
+	font-family: DigitalFont, sans-serif;
+	font-size: 3.5em;
+}
+
+p#volume-level.orange{
+	color: #f48f19;
+}
+
+
+p#volume-level.blue{
+	color: #29c8de;
+}
+
+p#volume-level.pink{
+	color: #ff9fd9;
+}
+
+p#volume-level.purple{
+	color: #c229ff;
+}
+
+p#volume-level.red{
+	color: #e55656;
+}
+
+/* Branding */
+#branding p{
+	margin: 15px 0 0 10px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #999;
+	font-family: CursiveFont, sans-serif;
+}
+
