@@ -5,7 +5,7 @@
 
 
 //Owner Branding Label
-$('#owner').text('Steven Andrews');
+$('#owner').text('Your Name Here');
 
 $(document).ready(function(){
 
