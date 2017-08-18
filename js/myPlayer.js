@@ -2,12 +2,11 @@
 //MP3 Player Script
 
 
-
-
 //Owner Branding Label
 $('#owner').text('Your Name Here');
 
 $(document).ready(function(){
+
 
 	//Hide Pause Btn from the start of the app
 	$('#pause-btn').hide();
@@ -17,6 +16,7 @@ $(document).ready(function(){
 
 	//Set current track to first track
 	var currentTrack = 0;
+
 
 	var i = 0; //Theme Incrementer Init
 
@@ -35,9 +35,10 @@ $(document).ready(function(){
 	];
 
 
-	//Create an array of objects for your song tracks
+	//Create an array of objects for your song tracks http://www.last.fm/api/auth/?api_key=xxx
 	//that contain the artist name, the url to the track locations
 	//and the url to the album cover.
+
 	var tracks = [
 		{
 			artist: 'Anthony Hamilton',
@@ -165,9 +166,6 @@ $(document).ready(function(){
 		
 	});
 
-
-	//Allow functionality with the Branding area
-	//Click the Brand to control the theme color
 	$('#branding').click(function(){
 
 		i++;
@@ -203,7 +201,6 @@ $(document).ready(function(){
 
 	});
 
-	//Create a function to handle the current time and duration of the current song
 	function showDuration(){
 
 		$(audio).bind('timeupdate', function(){
@@ -218,7 +215,19 @@ $(document).ready(function(){
 			}
 
 			$('#currentTime').html(minutes + ':' + seconds);
-			$('#duration').html(durationMin + ':' + durationSec);
+			$('#duration').html("-" + durationMin + ':' + durationSec);
+
+			if(durationMin == minutes && durationSec == seconds){
+				audio.isEnded = true;
+				currentTrack++;
+				if(tracks.length == currentTrack){
+					currentTrack = 0;
+				}
+				initAudio();
+				audio.play();
+				$('#play-btn').hide();
+				$('#pause-btn').show();
+			}
 
 			var value = 0;
 
