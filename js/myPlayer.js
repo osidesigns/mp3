@@ -102,7 +102,7 @@ $(document).ready(function(){
 	$('#prev-btn').click(function(){
 
 		if(currentTrack == 0){
-			currentTrack = tracks.length -1;
+			currentTrack = tracks.length - 1;
 		}else{
 			currentTrack--;
 		}
@@ -215,7 +215,7 @@ $(document).ready(function(){
 			}
 
 			$('#currentTime').html(minutes + ':' + seconds);
-			$('#duration').html("-" + durationMin + ':' + durationSec);
+			$('#duration').html(durationMin + ':' + durationSec);
 
 			if(durationMin == minutes && durationSec == seconds){
 				audio.isEnded = true;
