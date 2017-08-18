@@ -35,7 +35,7 @@ $(document).ready(function(){
 	];
 
 
-	//Create an array of objects for your song tracks http://www.last.fm/api/auth/?api_key=xxx
+	//Create an array of objects for your song tracks
 	//that contain the artist name, the url to the track locations
 	//and the url to the album cover.
 
